@@ -7,7 +7,7 @@ import Tiktok from "../../assets/svg/tiktok.svg";
 import Cycounter from '../../assets/imgs/cycounter.png'
 const Footer = () => {
   return (
-    <footer className="bg-[#25272c]">
+    <footer className="bg-[#25272c] mt-10">
       <div className="container1 py-6">
         <div className="grid grid-cols-4 gap-5 max-[880px]:grid-cols-3 max-[650px]:grid-cols-2 max-[500px]:grid-cols-1">
           <div className="flex flex-col gap-3">
