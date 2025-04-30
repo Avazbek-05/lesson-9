@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Basket = () => {
   const [basketData, setBasketData] = useState([]);
@@ -13,11 +14,17 @@ const Basket = () => {
       <h1 className="text-2xl font-bold mb-6">Savatdagi mahsulotlar</h1>
 
       {basketData.length === 0 ? (
-        <p className="text-gray-500">Savat hozircha bo‘sh.</p>
+        <div className="flex flex-col items-center gap-5  h-screen justify-center">
+          <p className="text-gray-500">Savat hozircha bo‘sh.</p>
+          <Link to={'/'} className="border p-2 border-yellow-400 rounded-lg">Home Page</Link>
+        </div>
       ) : (
         <div className="gap-5 flex flex-col">
           {basketData.map((item, index) => (
-            <div key={index} className="border w-fit border-[#bab6b6] rounded-xl  p-2 flex items-center">
+            <div
+              key={index}
+              className="border w-fit border-[#bab6b6] rounded-xl  p-2 flex items-center"
+            >
               <img
                 src={item.img}
                 alt={item.title}
@@ -32,7 +39,6 @@ const Basket = () => {
                   {item.oldPrice?.toLocaleString("ru-RU")} сум
                 </p>
               </div>
-
             </div>
           ))}
         </div>
