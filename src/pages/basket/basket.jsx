@@ -17,7 +17,7 @@ const Basket = () => {
       ) : (
         <div className="gap-5 flex flex-col">
           {basketData.map((item, index) => (
-            <div key={index} className="border border-[#bab6b6] rounded-xl p-2 flex items-center">
+            <div key={index} className="border w-fit border-[#bab6b6] rounded-xl  p-2 flex items-center">
               <img
                 src={item.img}
                 alt={item.title}
@@ -32,6 +32,7 @@ const Basket = () => {
                   {item.oldPrice?.toLocaleString("ru-RU")} сум
                 </p>
               </div>
+
             </div>
           ))}
         </div>
